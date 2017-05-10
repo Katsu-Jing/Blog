@@ -28,18 +28,7 @@ reward_comment: 大爷，觉得好就赏杯咖啡吧^_^
 wechatpay: 微信当面付图片的url
 alipay: 支付宝当面付图片的url
 
-#site count
-busuanzi_count:
-  # count values only if the other configs are false
-  enable: true
-  # custom uv span for the whole site
-  site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>    #如果使用默认的，会显示图标
-  site_uv_footer:
-  # custom pv span for the whole site
-  site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>     #如果使用默认的，会显示图标
-  site_pv_footer:
+
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -51,7 +40,7 @@ busuanzi_count:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -160,7 +149,7 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  Github: https://github.com/Katsu-Jing
+  GitHub: https://github.com/Katsu-Jing
   #LinkLabel: Link
 
 
@@ -298,7 +287,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 
 # ---------------------------------------------------------------
@@ -327,7 +316,7 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname:
+  shortname: jing
   count: true
 
 # Hypercomments
@@ -432,7 +421,7 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -442,7 +431,7 @@ busuanzi_count:
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
@@ -487,7 +476,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
