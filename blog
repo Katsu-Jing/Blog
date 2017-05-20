@@ -5,7 +5,7 @@ path="/Users/holmestian.tc/Personal/Blog"
 
 function exe(){
 
-    if [ $1 == "-n" -a $# -ne 3 ]
+    if [ $1 == "-n" -a $# -ne 2 ]
     then
         return 1
     fi
@@ -16,6 +16,8 @@ function exe(){
         return 0
         ;;
     -d)
+        hexo clean
+        hexo generate
         hexo deploy
         return 0
         ;;
@@ -29,8 +31,13 @@ function exe(){
         ;;
     -n)
         hexo new $2
+        echo "here is abstract" >> "${path}/source/_posts/$2.md"
+        echo "<!-- more -->" >> "${path}/source/_posts/$2.md"
         open "${path}/source/_posts/$2.md"
         return 0
+        ;;
+    -o)
+        open "${path}/source/_posts/"
         ;;
     -s)
         hexo clean
@@ -52,7 +59,9 @@ function show_help(){
     echo "blog -c 清除工作区已经构建的页面"
     echo "blog -d 将博客部署到服务器"
     echo "blog -g 在本地工作区构建页面"
-    echo "blog -n <blog_title> 创建一个新的博客markdown文件，并打开"
+    echo "blog -h 显示帮助文档"
+    echo "blog -n <blog_title> 创建一个新的博客markdown文件，文件名中不支持空格^_^，并打开"
+    echo "blog -o 打开所有博客所在文件夹"
     echo "blog -s 在本地运行服务器，验证本地构建"
 }
 

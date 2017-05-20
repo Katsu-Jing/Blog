@@ -1,10 +1,8 @@
 ---
-title: 让你的Mac更加"workable"
+
+title: set-mac
 date: 2017-05-12 15:43:58
-tags: 
-- 工具&效率
-categories:
-- 工具&效率
+
 ---
 
 # 1. 调整触摸板设置
