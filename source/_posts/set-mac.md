@@ -38,6 +38,7 @@ date: 2017-05-12 15:43:58
 ```
 
 2. 安装软件： brew install xxx
+
 3. 查找软件：brew search xxx
 4. 更新：brew update
 
